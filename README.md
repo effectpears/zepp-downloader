@@ -16,7 +16,11 @@ from: https://github.com/rolandsz/Mi-Fit-and-Zepp-workout-exporter
 6. Click on `Export data` again
 7. Look for any request containing the `apptoken` header or cookie
 
-insert the token in .env
+=> insert the token in .env
 
 # Start the script with:
 .venv/bin/python zepp_downloader.py
+
+
+# gemini / copilot generated :-)
+myself i wear a "Amazfit Stratos 3". It may be different for other watches, and the script may not work.
