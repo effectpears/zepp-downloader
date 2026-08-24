@@ -3,6 +3,7 @@ script to generate fit files from zepp
 
 # Dependencies
 python3 -m venv .venv
+
 .venv/bin/pip install requests fit-tool
 
 # how to get the token:
