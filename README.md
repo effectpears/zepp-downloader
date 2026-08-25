@@ -28,5 +28,12 @@ You only need to retrieve the APP_TOKEN once; enter your email address and passw
 ```
 Run the script regularly, e.g. via cron, to generate the fit files.
 
+# WIP / TO DO
+
+check the sport mapping ! 
+
+> [!NOTE]
+Please open an issue if the assignment is incorrect; I haven't been able to test everything yet. The watches may also have different sports modes.
+
 # gemini / copilot generated :-)
 myself i wear a "Amazfit Stratos 3". It may be different for other watches, and the script may not work.
