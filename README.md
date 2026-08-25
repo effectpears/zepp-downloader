@@ -2,26 +2,31 @@
 script to generate fit files from zepp
 
 # Dependencies
+```
 python3 -m venv .venv
-
+```
+```
 .venv/bin/pip install requests fit-tool
+```
+## .env file
+
+Create an .env file from the example.
+
+Add the paths; the APP_TOKEN will be added automatically in the next step.
 
 # how to get the token:
-from: https://github.com/rolandsz/Mi-Fit-and-Zepp-workout-exporter
 
-1. Open the [GDPR page](https://user.huami.com/privacy2/index.html?loginPlatform=web&platform_app=com.xiaomi.hm.health)
-2. Click `Export data`
-3. Sign in to your account
-4. Open the developer tools in your browser (F12)
-5. Select the `Network` tab
-6. Click on `Export data` again
-7. Look for any request containing the `apptoken` header or cookie
+You only need to retrieve the APP_TOKEN once; enter your email address and password. The token will be automatically transferred to the .env file.
 
-=> insert the token in .env
+```
+.venv/bin/python zepp_app_token.py
+```
 
 # Start the script with:
+```
 .venv/bin/python zepp_downloader.py
-
+```
+Run the script regularly, e.g. via cron, to generate the fit files.
 
 # gemini / copilot generated :-)
 myself i wear a "Amazfit Stratos 3". It may be different for other watches, and the script may not work.
