@@ -570,7 +570,9 @@ def map_huami_sport(huami_type: int) -> tuple[Sport, SubSport]:
         27: (Sport.TRAINING, SubSport.YOGA),         # Yoga
         
         # Sonstiges & Multisport
+        21: (Sport.JUMP_ROPE, SubSport.GENERIC), # Seilspringen
         39: (Sport.MULTISPORT, SubSport.GENERIC),    # Triathlon
+        93: (Sport.ARCHERY, SubSport.GENERIC), # Bogenschießen
         
         # Fallbacks (zur Sicherheit)
         16: (Sport.MOUNTAINEERING, SubSport.GENERIC),
@@ -605,11 +607,13 @@ def get_sport_name(huami_type: int) -> str:
         18: "alpine_skiing",
         19: "cross_country_skiing",
         20: "snowboarding",
+        21: "jumprope",
         23: "indoor_rowing",
         24: "indoor_fitness",
         27: "yoga",
         39: "triathlon",
         70: "climbing",
+        93: "archery",
     }
 
     return mapping.get(huami_type, "generic")
