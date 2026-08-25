@@ -558,7 +558,7 @@ def map_huami_sport(huami_type: int) -> tuple[Sport, SubSport]:
         
         # Outdoor & Wintersport
         13: (Sport.MOUNTAINEERING, SubSport.GENERIC),# Bergsteigen
-        17: (Sport.HIKING, SubSport.GENERIC),        # Wandern
+        17: (Sport.TENNIS, SubSport.GENERIC),        # Tennis
         18: (Sport.ALPINE_SKIING, SubSport.GENERIC), # Skifahren
         19: (Sport.CROSS_COUNTRY_SKIING, SubSport.GENERIC), # Skilanglauf
         
@@ -601,7 +601,7 @@ def get_sport_name(huami_type: int) -> str:
         14: "swimming",
         15: "open_water_swimming",
         16: "mountaineering",
-        17: "hiking",
+        17: "tennis",
         18: "alpine_skiing",
         19: "cross_country_skiing",
         20: "snowboarding",
