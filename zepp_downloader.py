@@ -551,6 +551,7 @@ def map_huami_sport(huami_type: int) -> tuple[Sport, SubSport]:
         # Radfahren
         9: (Sport.CYCLING, SubSport.GENERIC),        # Radfahren (Outdoor)
         10: (Sport.CYCLING, SubSport.INDOOR_CYCLING),# Indoor Cycling
+        47: (Sport.CYCLING, SubSport.MOUNTAIN),      # MTB
         
         # Wassersport
         14: (Sport.SWIMMING, SubSport.LAP_SWIMMING), # Beckenschwimmen
@@ -559,9 +560,13 @@ def map_huami_sport(huami_type: int) -> tuple[Sport, SubSport]:
         # Outdoor & Wintersport
         13: (Sport.MOUNTAINEERING, SubSport.GENERIC),# Bergsteigen
         17: (Sport.TENNIS, SubSport.GENERIC),        # Tennis
-        18: (Sport.ALPINE_SKIING, SubSport.GENERIC), # Skifahren
+        18: (Sport.SOCCER, SubSport.GENERIC), # soccer
         19: (Sport.CROSS_COUNTRY_SKIING, SubSport.GENERIC), # Skilanglauf
+        22: (Sport.HIKING, SubSport.GENERIC),        # Wandern
+        42: (Sport.SNOWBOARDING, SubSport.GENERIC),     #snowboard
         70: (Sport.ROCK_CLIMBING, SubSport.GENERIC), # Klettern
+        105: (Sport.ALPINE_SKIING, SubSport.RESORT),  #skifahren
+        178: (Sport.SNOWSHOEING, SubSport.GENERIC),   #schneeschuhwandern
         
         # Fitness / Hallensport
         11: (Sport.FITNESS_EQUIPMENT, SubSport.ELLIPTICAL), # Crosstrainer
@@ -573,9 +578,39 @@ def map_huami_sport(huami_type: int) -> tuple[Sport, SubSport]:
         21: (Sport.JUMP_ROPE, SubSport.GENERIC), # Seilspringen
         39: (Sport.MULTISPORT, SubSport.GENERIC),    # Triathlon
         93: (Sport.ARCHERY, SubSport.GENERIC), # Bogenschießen
-        
+        94: (Sport.GENERIC, SubSport.GENERIC), #reiten
+        #zu sortieren
+        71: (Sport.GENERIC, SubSport.GENERIC), #Ballet
+        72: (Sport.GENERIC, SubSport.GENERIC), #Bauchtanz
+        73: (Sport.GENERIC, SubSport.GENERIC), #Squaredance
+        74: (Sport.GENERIC, SubSport.GENERIC), #Street Dance
+        75: (Sport.GENERIC, SubSport.GENERIC), #Turniertanz
+        76: (Sport.GENERIC, SubSport.GENERIC), #Tanzen
+        77: (Sport.GENERIC, SubSport.GENERIC), #Zumba
+        148: (Sport.GENERIC, SubSport.GENERIC), #Fechten
+        96: (Sport.GENERIC, SubSport.GENERIC), #Karate
+        97: (Sport.BOXING, SubSport.GENERIC), #Boxen
+        98: (Sport.GENERIC, SubSport.GENERIC), #Judo
+        99: (Sport.GENERIC, SubSport.GENERIC), #Ringen
+        100: (Sport.GENERIC, SubSport.GENERIC), #Tai Chi
+        101: (Sport.GENERIC, SubSport.GENERIC), #Muay Thai
+        102: (Sport.GENERIC, SubSport.GENERIC), #Taekwondo
+        103: (Sport.GENERIC, SubSport.GENERIC), #Kampfsport
+        104: (Sport.GENERIC, SubSport.GENERIC), #Kickboxen
+        78: (Sport.CRICKET, SubSport.GENERIC), #Cricket
+        79: (Sport.BASEBALL, SubSport.GENERIC), #Baseball
+        80: (Sport.GENERIC, SubSport.GENERIC), #Bowling
+        81: (Sport.RACKET, SubSport.SQUASH), #Squash
+        82: (Sport.RUGBY, SubSport.GENERIC), #Rugby
+        85: (Sport.BASKETBALL, SubSport.GENERIC), #Basketball
+        86: (Sport.BASEBALL, SubSport.GENERIC), #Softball
+        87: (Sport.GENERIC, SubSport.GENERIC), #Gateball
+        88: (Sport.VOLLEYBALL, SubSport.GENERIC), #Volleyball
+        89: (Sport.RACKET, SubSport.TABLE_TENNIS), #Tischtennis
+        90: (Sport.FIELD_HOCKEY, SubSport.GENERIC), #Hockey
+        91: (Sport.HANDBALL, SubSport.GENERIC), #Handball
+        92: (Sport.RACKET, SubSport.BADMINTON), #Badminton        
         # Fallbacks (zur Sicherheit)
-        16: (Sport.MOUNTAINEERING, SubSport.GENERIC),
         20: (Sport.SNOWBOARDING, SubSport.GENERIC),
     }
 
@@ -602,19 +637,53 @@ def get_sport_name(huami_type: int) -> str:
         13: "mountaineering",
         14: "swimming",
         15: "open_water_swimming",
-        16: "mountaineering",
         17: "tennis",
-        18: "alpine_skiing",
+        18: "soccer",
         19: "cross_country_skiing",
         20: "snowboarding",
         21: "jumprope",
+        22: "hiking",
         23: "indoor_rowing",
         24: "indoor_fitness",
         27: "yoga",
         39: "triathlon",
+        42: "snowboard",
+        47: "mountainbike", 
         70: "climbing",
+        71: "ballet",
+        72: "bauchtanz",
+        73: "squaredance",
+        74: "street dance",
+        75: "turniertanz",
+        76: "tanzen",
+        77: "zumba",
+        148: "fechten",
+        96: "karate",
+        97: "boxen",
+        98: "judo",
+        99: "ringen",
+        100: "tai chi",
+        101: "muay thai",
+        102: "taekwondo",
+        103: "kampfsport",
+        104: "kickboxen",
+        78: "cricket",
+        79: "baseball",
+        80: "bowling",
+        81: "squash",
+        82: "rugby",
+        85: "basketball",
+        86: "softball",
+        87: "gateball",
+        88: "volleyball",
+        89: "tischtennis",
+        90: "hockey",
+        91: "handball",
+        92: "badminton",
         93: "archery",
-    }
+        94: "equestrian",
+        105: "skiing",
+        178: "snowshoeing",    }
 
     return mapping.get(huami_type, "generic")
     
